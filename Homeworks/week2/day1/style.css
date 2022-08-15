@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html { 
+    background: url(https://www.nba.com/resources/static/team/v2/celtics/evergreen/legacy/homepage/media/75th/75th-bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.nbaNav{
+    border-bottom: solid blue;
+    height: 60px;
+    display: flex;
+}
+
+.nbaNav img{
+    height: 50px;
+}
+
+.allTags{
+    display: flex;
+    width: 100%;
+    margin-left: 50%;
+    justify-content: space-between;
+}
+
+.nbaNav div{
+    margin-top: 15px;
+    font-family: roboto;
+}
+
+.nbaNav .tags:hover{
+    border-bottom: solid black;
+}
+
+.celticsLogo{
+    height: 75px;
+    background-color: green;
+    display: flex;
+    
+}
+
+.celticsLogo img{
+    height: 60px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.celticsTags {
+    display: flex;
+    color: white;
+    width: 70%;
+    margin-left: 70px;
+}
+
+.celtags{
+    margin-top: 30px;
+    margin: 2em;
+    font-family: roboto;
+}
+
+.headline{
+    display: flex;
+}
+
+.mainNews{
+    /* border: solid black; */
+    width: 60%;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.mainNews img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sideNews{
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    padding: 30px;
+}
+
+.sideNews img{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.newsContainer{
+    display: flex;
+    padding: 15px;
+}
+
+.newsBox{
+    border: solid black;
+    border-radius: 20px;
+    width: 400px;
+    height: 550px;
+    margin: 15px;
+}
+
+.newsImage{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.newsTitle{
+    font-family: roboto;
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.viewAllStories{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.anchorMoreStories {
+    width: 100px;
+    padding: 20px;
+    border: solid green;
+    border-radius: 30px;
+    color: green;
+    font-family: roboto;
+}
+
+.footer{
+    display: flex;
+    background-color: green;
+    margin-top: 30px;
+}
+
+.subFooter{
+    color: white;
+    font-family: roboto;
+    font-size: 20px;
+    margin-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+.subFooter section{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

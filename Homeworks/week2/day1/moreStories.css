@@ -1,0 +1,71 @@
+html { 
+    background: url(https://www.nba.com/resources/static/team/v2/celtics/evergreen/legacy/homepage/media/75th/75th-bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.newsHeader{
+    border-bottom: solid green;
+    color: green;
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.newsHeader h1{
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.newsSml{
+    margin-top: 35px;
+    margin-left: 80px;
+    border: solid black;
+    border-radius: 15px;
+    width: 500px;
+    height: 150px;
+    display: flex;
+}
+
+.moreNewsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.moreNewsContainer img{
+    width: 30%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.newsSmlInfo{
+    padding: 30px 30px 30px 30px;
+    font-family: roboto;
+    color: green;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.loadMore{
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.loadMoreText {
+    width: 100px;
+    padding: 20px;
+    border: solid green;
+    border-radius: 30px;
+    color: black;
+    font-family: roboto;
+}
+
+.loadMoreText:hover{
+    background-color: green;
+}
