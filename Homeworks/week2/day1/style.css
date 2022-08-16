@@ -70,6 +70,27 @@ html {
     padding-left: 30px;
 }
 
+@media (max-width: 1000px) {
+    .headline{
+        flex-direction: column;
+    }
+    .newsContainer{
+        flex-wrap: wrap;
+    }
+    .mainNews{
+        width: 90%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .mainNews{
+        width: 75%;
+    }
+    .sideNews{
+        width: 40vh;
+    }
+}
+
 .mainNews img{
     width: 100%;
     border-radius: 10px;
@@ -90,6 +111,7 @@ html {
 .newsContainer{
     display: flex;
     padding: 15px;
+    align-items: center;
 }
 
 .newsBox{
