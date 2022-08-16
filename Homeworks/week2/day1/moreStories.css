@@ -7,8 +7,8 @@ html {
   }
 
 .newsHeader{
-    border-bottom: solid green;
-    color: green;
+    border-bottom: solid rgb(0, 122, 51);
+    color: rgb(0, 122, 51);
     font-family: roboto;
     font-size: 25px;
     font-weight: 300;
@@ -46,7 +46,7 @@ html {
 .newsSmlInfo{
     padding: 30px 30px 30px 30px;
     font-family: roboto;
-    color: green;
+    color: rgb(0, 122, 51);
     font-size: 22px;
     font-weight: 800;
 }
@@ -60,12 +60,12 @@ html {
 .loadMoreText {
     width: 100px;
     padding: 20px;
-    border: solid green;
+    border: solid rgb(0, 122, 51);
     border-radius: 30px;
     color: black;
     font-family: roboto;
 }
 
 .loadMoreText:hover{
-    background-color: green;
+    background-color: rgb(0, 122, 51);
 }
