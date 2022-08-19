@@ -34,3 +34,8 @@ if (score >= 80) {
 } else if (score < 55) {
   console.log("you'll get em next time")
 }
+
+// for loop given a triangle shape with "#"
+for (let i = 1; i < 8; i++) {
+  console.log("#".repeat(i));
+}

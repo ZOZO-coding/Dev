@@ -13,13 +13,13 @@ const menu = {
 
 const {brunch, lunch, dinner, drinks} = menu;
 
-feedback.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const value = input.value;
-    const msg = document.createElement("div")
-    msg.innerText = value;
-    div.append(msg);
-})
+// feedback.addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     const value = input.value;
+//     const msg = document.createElement("div")
+//     msg.innerText = value;
+//     div.append(msg);
+// })
 
 for (let bru of brunch) {
     const brunchItem = document.createElement("p")
