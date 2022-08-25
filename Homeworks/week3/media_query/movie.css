@@ -1,0 +1,104 @@
+@media (min-width: 500px) {
+    h1{
+        color: rgb(81, 221, 175);
+    }
+    body{
+        background: rgb(235, 184, 184);
+    }
+    .first-movie{
+        display: block;
+    }
+    .second-movie{
+        display: none;
+    }
+    .third-movie{
+        display: none;
+    }  
+}
+
+@media (min-width: 800px) {
+    h1{
+        color: rgb(216, 148, 38);
+    }
+    body{
+        background: rgb(34, 58, 155);
+    }
+    .first-movie{
+        display: none;
+    }
+    .second-movie{
+        display: block;
+    }
+    .third-movie{
+        display: none;
+    }
+}
+
+@media (min-width: 1300px) {
+    h1{
+        color: rgb(182, 234, 69);
+    }
+    body{
+        background: rgb(235, 184, 184);
+    }
+    .first-movie{
+        display: none;
+    }
+    .second-movie{
+        display: none;
+    }
+    .third-movie{
+        display: block;
+    }
+    #poster{
+        width: 75%;
+        transition: 2s;
+    }
+    section .img-container img{
+        width: 75%;
+    }
+}
+
+@media (max-height: 800px) {
+    .content{
+        display: none;
+    }
+    .img-container{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+body{
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+section{
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    margin-left: 30%;
+}
+
+section img {
+    width: 100%;
+    transition: 2s;
+}
+
+section img:hover{
+    transform: scale(1.2);
+}
+
+.content{
+    width: 30vw;
+    height: 80px;
+    overflow: auto;
+    margin: 20px auto;
+}
+
+.img-outer-container{
+    display: block;
+    justify-content: center;
+}
