@@ -91,3 +91,40 @@ timmy.eat();
 
 timmy.exercise();
 timmy.exercise();
+
+// Chef Make Dinners
+
+class Dinner {
+    constructor(type) {
+        this.type = type;
+    }
+    get getType() {
+        return this.type;
+    }
+}
+
+class Chef {
+    constructor(name) {
+        this.name = name;
+    }
+
+    makeDinner(appetizers, entrees, desserts) {
+        return `Here is your dinner menu, prepared by Chef ${this.name}: appetizer menu: ${appetizers}, entree menu: ${entrees}, dessert menu: ${desserts}. Please enjoy!`
+    }
+}
+
+const appetizer1 = new Dinner("half dozen of oysters");
+const appetizer2 = new Dinner("charcoaled octopus");
+const appetizer3 = new Dinner("chef special uni spoon");
+const appetizers = [appetizer1.type, appetizer2.type, appetizer3.type];
+const entree1 = new Dinner("surf and turf");
+const entree2 = new Dinner("pan-seared sea bass");
+const entree3 = new Dinner("shrimp fried rice");
+const entrees = [entree1.type, entree2.type, entree3.type];
+const dessert1 = new Dinner("chocolate mousse");
+const dessert2 = new Dinner("cheesecake");
+const dessert3 = new Dinner("vanilla icecream");
+const desserts = [dessert1.type, dessert2.type, dessert3.type];
+const gordon = new Chef("Gordon Ramsay");
+console.log(gordon.makeDinner(appetizers, entrees, desserts));
+
