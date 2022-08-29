@@ -13,3 +13,7 @@ body{
 .enemy-container{
     width: 30vw;
 }
+
+.do-not-click {
+    cursor: not-allowed;
+}
