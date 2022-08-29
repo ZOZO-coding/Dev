@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Space Battleship Game</h1>
+        
+        <!-- main container -->
+        <div class="main-container">
+            <!-- me box -->
+            <div class="me-container">
+                <h2>This is me</h2>
+                <div class="me-moves">
+                    <button type="button" id="player-attack">attack</button>
+                    <button type="button" id="player-retreat">retreat</button>
+                </div>
+                <div class="me-status">
+                    <h4>Status Report</h4>
+                    <div id="player-hull">Your Hull: </div>
+                    <div id="player-firepower">Your FirePower: </div>
+                    <div id="player-accuracy">Your Accuracy: </div>
+                </div>
+            </div>
+            <!-- enemy box -->
+            <div class="enemy-container">
+                <h2>Enemy #1</h2>
+                <div class="enemy-status">
+                    <div class="me-moves">
+                        <button type="button" id="enemy-attack">attack</button>
+                    </div>
+                    <h4>Status Report</h4>
+                    <div id="enemy-hull"></div>
+                    <div id="enemy-firepower"></div>
+                    <div id="enemy-accuracy"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js" type="module"></script>
+    </body>
+</html>
