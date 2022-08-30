@@ -31,6 +31,10 @@ body{
     width: 30vw;
 }
 
+.enemy0, .enemy1, .enemy2, .enemy3, .enemy4 {
+    margin: 5px 5px;
+}
+
 .enemy-ships div img{
     width: 100px;
     height: 100px;
@@ -41,4 +45,10 @@ body{
     grid-template-columns: repeat(2, auto);
     /* flex-wrap: wrap; */
     /* max-width: 40vw; */
+}
+
+.winningMessage {
+    font-size: 40px;
+    width: 30vw;
+    margin-top: 20px;
 }

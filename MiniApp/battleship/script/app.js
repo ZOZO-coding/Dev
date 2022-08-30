@@ -1,8 +1,5 @@
 import { PlayerShip } from "./classes.js";
 import { enemy0, enemy1, enemy2, enemy3, enemy4 } from "./enemyship.js";
-// create which turn indicator:
-let myTurn;
-
 
 // create objects of you and enemy
 const yourShip = new PlayerShip('zoey');
@@ -12,6 +9,10 @@ const enemies = [enemy0, enemy1, enemy2, enemy3, enemy4];
 // create elements
 const playerAttackBtn = document.getElementById('player-attack');
 const playerRetreat = document.getElementById('player-retreat');
+
+// create some indicators:
+let myTurn;
+let remainingEnemy = 5;
 
 // sound
 const blaster = document.createElement("AUDIO");
@@ -25,6 +26,14 @@ const playerHull = document.getElementById('player-hull');
 const playerFirePower = document.getElementById('player-firepower');
 const playerAccuracy = document.getElementById('player-accuracy');
 
+// winning  & losing message
+const winningMessage = document.createElement("div");
+winningMessage.classList.add("winningMessage");
+winningMessage.innerText = "Congratulations, you are now officialy lord of the space";
+const losingMessage = document.createElement("div");
+losingMessage.innerText = "You died, please try again."
+
+// create enemy section
 const enemyTerritory = document.querySelector('.enemy-ships');
 
 for (let i = 0; i < enemies.length; i++) {
@@ -92,15 +101,20 @@ function playerAttack() {
     curEnemyHull.innerText = `Enemy Hull: ${curEnemy.hull}`;
     if (curEnemy.isDead) {
         alert('enemy is destroyed!')
+        remainingEnemy--;
         explosionSound.play();
         // delete that enemy
         deleteEnemy(enemyNum);
+    }
+    if (remainingEnemy === 0) {
+        enemyTerritory.append(winningMessage);
     }
 }
 
 playerRetreat.addEventListener('click', () => yourShip.retreat());
 
 
+// enemy actions
 
 for (let i = 0; i < enemyAttackBtns.length; i++) {
     const currBtn = document.querySelector(`.enemy-attack-btn${i}`);
@@ -134,6 +148,7 @@ function enemyAttack(e) {
 function enemyAttackHelper(enemy) {  
     enemy.attack(yourShip);
     swapTurns();
+    openFireBtn(playerAttackBtn);
 
     fighterSound.play();
     playerHull.innerText = '';
