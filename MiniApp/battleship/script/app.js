@@ -6,9 +6,13 @@ const yourShip = new PlayerShip('zoey');
 // const enemy1 = new EnemyShip('enemy no.1');
 const enemies = [enemy0, enemy1, enemy2, enemy3, enemy4];
 
-// create elements
+// create & get player elements
 const playerAttackBtn = document.getElementById('player-attack');
 const playerRetreat = document.getElementById('player-retreat');
+
+const playerHull = document.getElementById('player-hull');
+const playerFirePower = document.getElementById('player-firepower');
+const playerAccuracy = document.getElementById('player-accuracy');
 
 // create some indicators:
 let myTurn;
@@ -22,9 +26,12 @@ fighterSound.setAttribute("src", "../sound/tie-fighter-fire-1.mp3");
 const explosionSound = document.createElement("AUDIO");
 explosionSound.setAttribute("src", "../sound/TIE fighter explode.mp3");
 const start = document.querySelector('[data-button]');
-const playerHull = document.getElementById('player-hull');
-const playerFirePower = document.getElementById('player-firepower');
-const playerAccuracy = document.getElementById('player-accuracy');
+const darthVaderMusic = document.createElement("AUDIO");
+darthVaderMusic.setAttribute("src", "../sound/imperial_march.mp3");
+
+// explosion
+const explode = document.createElement("img");
+explode.setAttribute("src", "https://i.gifer.com/WzMJ.gif");
 
 // winning  & losing message
 const winningMessage = document.createElement("div");
@@ -41,6 +48,7 @@ for (let i = 0; i < enemies.length; i++) {
     enemyContainer.classList.add(`enemy${i}`);
     const enemyFigure = document.createElement('img');
     enemyFigure.setAttribute("src", "https://lumiere-a.akamaihd.net/v1/images/screen_shot_2015-05-26_at_5_16a39e17.png?region=0%2C71%2C812%2C457");
+    enemyFigure.setAttribute("class", `enemy-figure${i}`);
     const enemyName = document.createElement('h2');
     enemyName.innerText = `Enemy ${i}`;
     const enemyBtn = document.createElement('button');
@@ -100,14 +108,18 @@ function playerAttack() {
     curEnemyHull.innerText = '';
     curEnemyHull.innerText = `Enemy Hull: ${curEnemy.hull}`;
     if (curEnemy.isDead) {
-        alert('enemy is destroyed!')
+        // explosion gif here
+        document.querySelector(`.enemy-figure${enemyNum}`).src = "https://i.gifer.com/WzMJ.gif";
+
+        // alert('enemy is destroyed!')
         remainingEnemy--;
         explosionSound.play();
         // delete that enemy
-        deleteEnemy(enemyNum);
+        setTimeout(() => deleteEnemy(enemyNum), 2000)
     }
     if (remainingEnemy === 0) {
         enemyTerritory.append(winningMessage);
+        darthVaderMusic.play();
     }
 }
 
