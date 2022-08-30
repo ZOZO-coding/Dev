@@ -8,15 +8,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="#">
     </head>
     <body>
-        <h1>Space Battleship Game</h1>
-        
+        <div class="header-section">
+            <h1>Space Battleship Game</h1>
+            <button type="button" data-button>restart</button>
+        </div>
         <!-- main container -->
         <div class="main-container">
             <!-- me box -->
             <div class="me-container">
-                <h2>This is me</h2>
+                <h2>Zoey Battleship</h2>
+                <img src="https://milnersblog.files.wordpress.com/2015/09/the-finalizer-first-order-star-destroyer-star-wars-the-force-awakens-spacecraft-cut-out-with-transparent-background.png" alt="">
                 <div class="me-moves">
                     <button type="button" id="player-attack">attack</button>
                     <button type="button" id="player-retreat">retreat</button>
@@ -30,21 +34,10 @@
             </div>
             <!-- enemy box -->
             <div class="enemy-ships">
-                <div class="enemy-container">
-                    <h2>Enemy #1</h2>
-                    <div class="enemy-status">
-                        <div class="me-moves">
-                            <button type="button" id="enemy-attack">attack</button>
-                        </div>
-                        <h4>Status Report</h4>
-                        <div id="enemy-hull"></div>
-                        <div id="enemy-firepower"></div>
-                        <div id="enemy-accuracy"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
 
-        <script src="app.js" type="module"></script>
+        <script src="./script/app.js" type="module"></script>
     </body>
 </html>

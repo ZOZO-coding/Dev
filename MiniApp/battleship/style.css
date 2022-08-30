@@ -1,19 +1,44 @@
 body{
-    background-color: rgb(241, 230, 214);
+    /* background-color: rgb(241, 230, 214); */
+    background: url(https://c.tenor.com/om-jufvjyzUAAAAd/star-wars.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header-section{
+    text-align: center;
+    color: white;
 }
 
 .main-container{
     display: flex;
+    color: white;
+    justify-content: center;
 }
 
 .me-container{
     width: 30vw;
 }
 
+.me-container img{
+    width: 200px;
+    height: 200px;
+}
+
 .enemy-container{
     width: 30vw;
 }
 
-.do-not-click {
-    cursor: not-allowed;
+.enemy-ships div img{
+    width: 100px;
+    height: 100px;
+}
+
+.enemy-ships {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* flex-wrap: wrap; */
+    /* max-width: 40vw; */
 }
