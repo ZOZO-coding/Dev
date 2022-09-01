@@ -1,0 +1,10 @@
+.station-container img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+}
+
+button{
+    margin: 10px 10px;
+}
