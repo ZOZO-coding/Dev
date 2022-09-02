@@ -1,0 +1,42 @@
+.themeContainer{
+    display: flex;
+    justify-content: space-around;
+    font-family: roboto;
+}
+
+.themeTab:hover{
+    color: brown;
+    text-decoration: underline;
+}
+
+.sneakersContainer{
+    margin: 6px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sneakerBox{
+    border: solid turquoise;
+    width: 200px;
+    margin: 15px;
+}
+
+.sneakerBox p{
+    margin-top: auto;
+}
+
+.sneakerBox:hover{
+    border: solid green;
+    border-width: 5px;
+}
+
+.sneakerInfo{
+    padding-top: 5px;
+    height: 90px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.shoe{
+    width: 100%;
+}

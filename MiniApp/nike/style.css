@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: nike title;
+    src: url(https://www.nike.com/static/ncss/4.1/dotcom/fonts/Nike-TG.woff2);
+}
+
+.navContainer{
+    border: solid black;
+    height: 60px;
+    border-width: .2px;
+    display: flex;
+}
+
+.nikeicon{
+    height: 60px;
+    margin-left: 3px;
+}
+
+.smIcons{
+    /* border: solid purple; */
+    margin-left: 70%;
+    padding: 5px;
+}
+
+.breifcase{
+    height: 40px;
+}
+
+.breifcase:hover{
+    height: 40px;
+    border: solid black;
+    border-radius: 50%;
+    border-width: 2px;
+    background-color: lightgray;
+}
+
+.mglass{
+    height: 30px;
+    margin-top: 4px;
+}
+
+.topScroll{
+    text-align: center;
+}
+
+.joiner{
+    text-align: center;
+}
+
+.mainPic{
+    width: 100%;
+}
+
+.mainSection{
+    position: relative;
+}
+
+.words{
+    position: absolute;
+    top: 40%;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.words h1{
+    font-family: nike title;
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: auto;
+}
+
+.shopButtons{
+    position: absolute;
+    top: 80%;
+}
+
+.shopButtons button{
+    background: black;
+    color: white;
+    border-radius: 30px;
+    width: fit-content;
+    height: 35px;
+    padding: 6px 20px;
+    border: 1.5px solid transparent;
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: roboto;
+}
+
+.shopButtons button:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.productImages{
+    display: flex;
+    flex-direction: row;
+}
+
+.products img{
+    width: 50%;
+    padding: 5px;
+}
