@@ -8,3 +8,9 @@
 button{
     margin: 10px 10px;
 }
+
+.song-display{
+    width: 50vw;
+    height: 30vh;
+    overflow: scroll;
+}

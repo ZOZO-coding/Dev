@@ -1,0 +1,34 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.keypad-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: 50vw;
+    height: 50vh;
+    border: solid 2px black;
+}
+
+.gif{
+    width: 20vw;
+    height: 20vh;
+    border: solid 2px black;
+    margin: 20px 20px;
+}
+
+.gif img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pad{
+    background-color: rgb(249, 134, 134);
+    margin: 10px 10px;
+}
+
+.pad:hover{
+    border: solid 2px yellow;
+}

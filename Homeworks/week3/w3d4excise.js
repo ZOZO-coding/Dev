@@ -127,4 +127,3 @@ const dessert3 = new Dinner("vanilla icecream");
 const desserts = [dessert1.type, dessert2.type, dessert3.type];
 const gordon = new Chef("Gordon Ramsay");
 console.log(gordon.makeDinner(appetizers, entrees, desserts));
-
