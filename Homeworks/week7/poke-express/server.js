@@ -16,7 +16,7 @@ app.get('/pokemon', (req, res) => {
 
 app.get('/pokemon/:id', (req, res) => {
     const {id} = req.params;
-    res.send(id);
+    res.render('Show', {id});
 })
 
 
