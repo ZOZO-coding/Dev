@@ -35,7 +35,18 @@ app.get('/logs', (req, res) => {
 })
 
 app.get('/logs/new', (req, res) => {
-    res.send('create a new log')
+    res.render('New') 
+})
+
+app.get('/logs/:id/edit', (req, res) => {
+    const { id } = req.params;
+    Log.findById(id)
+        .then((result) => {
+            res.render('Edit', {log: result})
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 })
 
 app.get('/logs/:id', (req, res) => {
@@ -65,7 +76,21 @@ app.post('/logs/', (req, res) => {
         .catch(err => {console.log(err);})
 })
 
-app.put
+app.put('/logs/:id', (req, res) => {
+    if (req.body.isBroken === "on") {
+        req.body.isBroken = true;
+      } else {
+        req.body.isBroken = false;
+    }
+    const { id } = req.params
+    Log.findByIdAndUpdate(id, req.body)
+        .then((result) => {
+            res.redirect(`/logs/${id}`)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+})
 
 app.delete('/logs/:id', (req, res) => {
     const { id } = req.params
