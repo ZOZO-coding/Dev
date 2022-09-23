@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config()
 const Log = require('./model/logs');
+const methodOverride = require("method-override");
 
 const app = express();
 
@@ -20,14 +21,33 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/logs/', (req, res) => {
-    res.send('Home Page')
+app.use(methodOverride("_method"));
+
+
+app.get('/logs', (req, res) => {
+    Log.find().sort({createdAt: -1})
+        .then((result) => {
+            res.render('Index', {logs: result})
+        })
+        .catch(err => {
+            console.log(err);
+        })
 })
 
-app.get('/logs/details')
-
 app.get('/logs/new', (req, res) => {
-    res.render('New')
+    res.send('create a new log')
+})
+
+app.get('/logs/:id', (req, res) => {
+    const { id } = req.params;
+    Log.findById(id)
+        .then(result => {
+            res.render('Show', {log: result})
+        })
+        .catch(err => {
+            console.log(err);
+            res.render('NotFound')
+        })
 })
 
 app.post('/logs/', (req, res) => {
@@ -47,6 +67,15 @@ app.post('/logs/', (req, res) => {
 
 app.put
 
-app.delete
+app.delete('/logs/:id', (req, res) => {
+    const { id } = req.params
+    Log.findByIdAndDelete(id)
+        .then(result => {
+            res.redirect('/logs')
+        })
+        .catch(err => {
+            console.log(err);
+        })
+})
 
 
