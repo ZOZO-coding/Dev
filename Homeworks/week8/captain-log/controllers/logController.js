@@ -3,7 +3,7 @@ const Log = require('../model/logs')
 const log_index = (req, res) => {
     Log.find().sort({createdAt: -1})
         .then((result) => {
-            res.render('Index', {logs: result})
+            res.render('captainLog/Index', {logs: result})
         })
         .catch(err => {
             console.log(err);
@@ -11,14 +11,14 @@ const log_index = (req, res) => {
 }
 
 const log_new = (req, res) => {
-    res.render('New') 
+    res.render('captainLog/New') 
 }
 
 const log_get_edit = (req, res) => {
     const { id } = req.params;
     Log.findById(id)
         .then((result) => {
-            res.render('Edit', {log: result})
+            res.render('captainLog/Edit', {log: result})
         })
         .catch((err) => {
             console.log(err);
@@ -29,7 +29,7 @@ const log_get_details = (req, res) => {
     const { id } = req.params;
     Log.findById(id)
         .then(result => {
-            res.render('Show', {log: result})
+            res.render('captainLog/Show', {log: result})
         })
         .catch(err => {
             console.log(err);
