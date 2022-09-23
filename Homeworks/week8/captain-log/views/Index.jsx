@@ -5,7 +5,7 @@ class Index extends React.Component {
         const { logs } = this.props
         return (
             <div className='logs content'>
-                <h1>All Logs</h1>
+                <h2>All Logs</h2>
 
                 <ul>
                     {logs && logs.map((log) => {
@@ -21,7 +21,9 @@ class Index extends React.Component {
                         )
                     })}
                 </ul>
+                <link rel="stylesheet" href="/style.css" />
             </div>
+            
         )
     }
 }

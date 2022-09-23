@@ -16,6 +16,7 @@ class New extends React.Component {
                     <br />
                     <input type="submit" />
                 </form>
+                <link rel="stylesheet" href="/style.css" />
             </div>
         )
     }

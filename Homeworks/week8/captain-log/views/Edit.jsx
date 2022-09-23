@@ -3,7 +3,6 @@ const React = require('react');
 class Edit extends React.Component {
     render() { 
         const { log } = this.props
-        console.log(log);
         return (
             <form action={`/logs/${log._id}?_method=PUT`} method='POST'>
                 <label htmlFor="title">Log title: </label>
@@ -18,6 +17,7 @@ class Edit extends React.Component {
                 ) : <input type="checkbox" id='checkbox' name='isBroken'/>}
                 <br />
                 <button>Submit</button>
+                <link rel="stylesheet" href="/style.css" />
             </form>
         );
     }

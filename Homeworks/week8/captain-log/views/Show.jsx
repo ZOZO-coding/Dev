@@ -16,6 +16,7 @@ class Show extends React.Component {
                 <form action="/logs">
                     <input type="submit" value='BACK TO HOMEPAGE' />
                 </form>
+                <link rel="stylesheet" href="/style.css" />
             </div>
         );
     }
