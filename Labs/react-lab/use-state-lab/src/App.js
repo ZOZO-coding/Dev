@@ -23,6 +23,7 @@ function App() {
 
     // data returns a object with a property named "Search" which is going to be an array of movie object
     setMovies(data.Search);
+    setSearchTerm('');
   }
 
   useEffect(() => {
@@ -36,15 +37,15 @@ function App() {
       <div className='search'>
         <input 
           type="text"
-          placeholder='Search for a movie'
+          placeholder='Search for a movie...'
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)} 
         />
-        <button onClick={() => searchMovies(searchTerm)}>Search</button>
+        <button onClick={() => {searchMovies(searchTerm)}}>Search</button>
       </div>
 
       {
-        movies.length > 0
+        movies
         ? (
           <div className='container'>
             {movies.map((movie) => (

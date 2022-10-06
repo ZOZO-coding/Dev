@@ -49,5 +49,11 @@ body {
 }
 
 .movie {
-  margin: 10px 10px;
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
 }
