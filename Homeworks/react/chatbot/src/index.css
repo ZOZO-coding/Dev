@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+}
+
+body {
+  font-family: var(--font-roboto);
+  background-color: #212426;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+}
+
+.App h2 {
+  margin: 20px;
+  color: white;
+}
+
+.dialog {
+  color: white;
+}
+
+.form {
+  width: 80%;
+  margin: 4rem 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem 1.75rem;
+  border-radius: 3rem;
+  background: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+.form input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  padding-right: 1rem;
+
+  outline: none;
+  color: #a1a1a1;
+  background: #1f2123;
+}
+
+.form button {
+  padding: 20px 40px;
+  border-radius: 0.5rem;
+  color: #a1a1a1;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dialog {
+  margin: 8px 5px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  font-size: 1rem;
+}
